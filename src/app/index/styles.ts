@@ -26,4 +26,14 @@ export const styles = StyleSheet.create({
     height: 32,
     width: 38,
   },
+
+  linkList: {
+    borderTopWidth: 1,
+    borderTopColor: colors.gray[600],
+  },
+
+  linkListContent: {
+    gap: 16,
+    paddingVertical: 16,
+  },
 });
