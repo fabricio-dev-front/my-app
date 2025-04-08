@@ -22,7 +22,7 @@ export default function Index() {
 
       <FlatList
         data={["1", "2", "3", "4", "5"]} // isso faz com que o FlatList renderize 5 vezes o mesmo item
-        keyExtractor={(item) => item} // cahve key
+        keyExtractor={(item) => item} // chave key
         renderItem={() => (
           <Link
             name="Portifolio"
