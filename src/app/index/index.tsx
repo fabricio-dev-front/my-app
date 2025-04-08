@@ -3,6 +3,7 @@ import { colors } from "@/styles/colors";
 import { Categories } from "@/components/categories";
 import { styles } from "./styles";
 import { View, Image, TouchableOpacity } from "react-native";
+import { Link } from "@/components/link";
 
 export default function Index() {
   return (
@@ -16,6 +17,14 @@ export default function Index() {
 
       <View>
         <Categories />
+      </View>
+
+      <View style={{ marginTop: 20 }}>
+        <Link
+          name="Portifolio"
+          url="https://github.com/fabricio-dev-front"
+          onDetails={() => console.log("Acessou!")}
+        />
       </View>
     </View>
   );

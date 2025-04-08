@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, PressableProps, Text } from "react-native";
-import { style } from "./category";
+import { style } from "./style";
 import { AntDesign } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
 

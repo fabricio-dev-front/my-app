@@ -1,5 +1,5 @@
 import { FlatList } from "react-native";
-import { styles } from "./styles";
+import { style } from "./style";
 import { categories } from "@/utils/caterories";
 import { Category } from "../category";
 
@@ -12,8 +12,8 @@ export function Categories() {
         <Category text={item.name} icon={item.icon} isSelected={false} />
       )}
       horizontal
-      style={styles.container}
-      contentContainerStyle={styles.content}
+      style={style.container}
+      contentContainerStyle={style.content}
     />
   );
 }
