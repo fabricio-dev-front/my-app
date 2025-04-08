@@ -4,6 +4,7 @@ import { Categories } from "@/components/categories";
 import { styles } from "./styles";
 import { View, Image, TouchableOpacity } from "react-native";
 import { Link } from "@/components/link";
+import { FlatList } from "react-native";
 
 export default function Index() {
   return (
@@ -19,13 +20,20 @@ export default function Index() {
         <Categories />
       </View>
 
-      <View style={{ marginTop: 20 }}>
-        <Link
-          name="Portifolio"
-          url="https://github.com/fabricio-dev-front"
-          onDetails={() => console.log("Acessou!")}
-        />
-      </View>
+      <FlatList
+        data={["1", "2", "3", "4", "5"]} // isso faz com que o FlatList renderize 5 vezes o mesmo item
+        keyExtractor={(item) => item} // cahve key
+        renderItem={() => (
+          <Link
+            name="Portifolio"
+            url="https://github.com/fabricio-dev-front"
+            onDetails={() => console.log("Acessou!")}
+          />
+        )} // renderiza o componente Link de acordo com o data, do array
+        style={styles.linkList}
+        contentContainerStyle={styles.linkListContent}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   );
 }
